@@ -165,13 +165,13 @@ function make_basic_auth(user, password) {
 }
 
 //
-var auth = make_basic_auth('monkichik','ohmygut');
+var auth = make_basic_auth('monkichik','');
 var url = 'https://secure.diigo.com/api/v2/bookmarks?key=8733f5608594ab82&user=monkichik&count=10&filter=all';
 
 console.log(auth);
 xml = new XMLHttpRequest();
 xml.open('GET', url);
-xml.setRequestHeader('Authorization', auth);
+xml.setRequestHeader('Authorization', 'Basic bW9ua2ljaGlrOm9obXlndXQ='); //auth
 xml.send();
 
 xml.onreadystatechange = function() {
