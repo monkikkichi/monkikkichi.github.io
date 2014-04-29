@@ -175,7 +175,7 @@ var url = 'https://secure.diigo.com/api/v2/bookmarks?key=8733f5608594ab82&user=m
 
 console.log(auth);
 xml = new XMLHttpRequest();
-xml.open('GET', url);
+xml.open('GET', url, true);
 xml.withCredentials = true;
 xml.setRequestHeader('Authorization', auth); //auth
 xml.send();
